@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+  <title><%= blog.title %> - Blogify</title>
+</head>
+<body>
+  <%- include('partials/nav') %>
+
+  <div class="container mt-4">
+    <div class="card">
+      <% if (blog.coverImage) { %>
+        <img src="<%= blog.coverImage %>" class="card-img-top" alt="<%= blog.title %>">
+      <% } %>
+      <div class="card-body">
+        <h1 class="card-title"><%= blog.title %></h1>
+        <p class="card-text"><%= blog.body %></p>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/script') %>
+</body>
+</html>
